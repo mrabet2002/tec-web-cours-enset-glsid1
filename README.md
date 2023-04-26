@@ -13,9 +13,9 @@
 ---
 * Note :
     > If you're cloning this repo to local 
-
+    >
     > run the folowing command in both projects "./express and ./prisma"
-        > $ npm install
+    >> $ npm install
 
 
 # THANKS :)
