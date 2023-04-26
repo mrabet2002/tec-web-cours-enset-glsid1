@@ -19,7 +19,10 @@ router.post('/', async (req, res, next) => {
       if (err.code == 'P2002') res.send('User exists')
       console.log(err);
     })
-    .catch(console.error);
+    .catch(err => {
+      console.error(err)
+      next(err);
+    });
 });
 
 router.put('/:id', async (req, res, next) => {
@@ -29,7 +32,10 @@ router.put('/:id', async (req, res, next) => {
       if (err.code == 'P2002') res.send('User exists')
       console.log(err);
     })
-    .catch(console.error);
+    .catch(err => {
+      console.error(err)
+      next(err);
+    });
 });
 
 router.delete('/:id', async (req, res, next) => {
@@ -39,7 +45,10 @@ router.delete('/:id', async (req, res, next) => {
       if (err.code == 'P2025') res.send('User exists')
       console.log(err);
     })
-    .catch(console.error);
+    .catch(err => {
+      console.error(err)
+      next(err);
+    });
 });
 
 module.exports = router;
